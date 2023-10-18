@@ -5,12 +5,12 @@ const categorySpan = document.querySelectorAll(".category span");
 const backupImage = "https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmV3c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
 
 const baseUrl = "https://newsapi.org/v2";
-const apiKey = "&apiKey=8f6f44650d6a48739c269e89051f21da";
+const apiKey = `&apiKey=${process.env.NEWS_API_KEY}`;
 
-const newsA = "https://newsapi.org/v2/top-headlines?country=us&apiKey=8f6f44650d6a48739c269e89051f21da"
-const newsB = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=8f6f44650d6a48739c269e89051f21da"
-const newsC = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=8f6f44650d6a48739c269e89051f21da"
-const newsD = "https://newsapi.org/v2/everything?q=crypto&sortBy=publishedAt&apiKey=8f6f44650d6a48739c269e89051f21da"
+const newsA = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWS_API_KEY}`
+const newsB = `https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=${process.env.NEWS_API_KEY}`
+const newsC = `https://newsapi.org/v2/top-headlines?sources=health&apiKey=${process.env.NEWS_API_KEY}`
+const newsD = `https://newsapi.org/v2/everything?q=health&sortBy=publishedAt&apiKey=${process.env.NEWS_API_KEY}`
 
 
 async function dataRequest(url){
